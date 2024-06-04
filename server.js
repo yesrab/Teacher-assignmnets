@@ -50,6 +50,16 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/api/v1/status", (req, res) => {
+  res.status(200).json({
+    message: "Hello from the server",
+    status: "success",
+    currentTime: new Date().toISOString(),
+    path: req.path,
+    url: req.originalUrl,
+  });
+});
+
 const usersRouter = require("./routes/users");
 app.use("/api/v1/users", usersRouter);
 
