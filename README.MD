@@ -4,7 +4,12 @@ run using
 
 ```
 npm run dev
+```
 
+or deploy via docker
+
+```
+docker pull yesrab/mockassignment:0.0.1.RELEASE
 ```
 
 ## Environment Variables
